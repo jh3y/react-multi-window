@@ -1,6 +1,5 @@
 import gsap from "gsap";
 import React from "react";
-import "../globals.css";
 
 const STORAGE_KEY = "windows";
 
@@ -27,10 +26,10 @@ const useWindow = (collectionName) => {
   const [id, setId] = React.useState(crypto.randomUUID());
   const [index, setIndex] = React.useState(Object.keys(windows).length);
   const [meta, setMeta] = React.useState({
-    left: screenLeft,
-    top: screenTop,
-    height: outerHeight,
-    width: outerWidth,
+    left: window.screenLeft,
+    top: window.screenTop,
+    height: window.outerHeight,
+    width: window.outerWidth,
   });
   const broadcastChannel = React.useRef(new BroadcastChannel(collectionName));
 
