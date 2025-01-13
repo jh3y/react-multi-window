@@ -56,10 +56,10 @@ const useWindow = (collectionName) => {
 
   const sync = () => {
     const meta = {
-      left: screenLeft,
-      top: screenTop,
-      height: outerHeight,
-      width: outerWidth,
+      left: window.screenLeft,
+      top: window.screenTop,
+      height: window.outerHeight,
+      width: window.outerWidth,
     };
     setMeta(meta);
   };
